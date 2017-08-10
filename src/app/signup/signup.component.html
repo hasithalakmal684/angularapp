@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="login login-container">
+    <div class="tab-content">
+      <div>
+        <div *ngIf="alert" style="background-color: #c94a4a;text-align: center;color: white;padding-top:5px ">{{alert}}</div>
+        <form class="form-signin">
+          <h4 style="text-align: center">Signup Using Mobile Number</h4>
+          <hr>
+          <span  class="reauth-email"></span>
+          <input type="text"  name="phone_num" class="form-control in" placeholder="Phone Number (+00000000000)" [(ngModel)]="modele.phone_number" #phone_number="ngModel" required autofocus>
+          <hr>
+          <button *ngIf="show" class="btn btn-lg btn-primary btn-block btn-signin" (click)="add()" >Send PIN</button>
+          <div *ngIf="!show">
+          <span  class="reauth-email"></span>
+          <input type="text"  name="token" class="form-control in" placeholder="PIN" [(ngModel)]="modele.pin" #token="ngModel" required>
+          <hr>
+          <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="validate()" >Validate</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <a [routerLink]="['/login']" class="lastline">
+      Don't have an account.? Login
+    </a>
+  </div>
+</div>

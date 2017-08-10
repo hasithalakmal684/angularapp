@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="login login-container">
+    <div class="tab-content">
+      <div>
+        <div *ngIf="alert" style="background-color: #c94a4a;text-align: center;color: white;padding-top:5px ">{{alert}}
+          <hr></div>
+        <form class="form-signin">
+          <span  class="reauth-email"></span>
+          <input type="text"  name="phone_num" class="form-control in" placeholder="Phone Number (+00000000000)" [(ngModel)]="model.phone_num" #phone_num="ngModel" required autofocus>
+          <input type="password"  name="password" class="form-control in" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" required autofocus>
+          <hr>
+
+          <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="login()">Login</button>
+        </form>
+      </div>
+    </div>
+    <a [routerLink]="['/signup']" class="lastline">
+      Don't have an account.? Signup
+    </a>
+  </div>
+</div>

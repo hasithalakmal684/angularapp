@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="login login-container">
+    <div class="tab-content">
+      <div>
+        <form class="form-signin">
+          <h4 style="text-align: center">Register</h4>
+          <hr>
+          <span  class="reauth-email"></span>
+          <input type="text"  name="name" class="form-control in" placeholder="Name" [(ngModel)]="modele.name" #name="ngModel" required autofocus>
+          <input type="email"  name="email" class="form-control in" placeholder="Email address" [(ngModel)]="modele.email" #email="ngModel" required autofocus>
+          <input type="password"  name="password" class="form-control in" placeholder="Password" [(ngModel)]="modele.password" #password="ngModel" required autofocus>
+          <input type="password"  name="password_c" class="form-control in" placeholder="Confirm Password" [(ngModel)]="modele.password_confirmation" #password_confirmation="ngModel" required autofocus>
+          <input type="text"  name="phone_num" class="form-control in" placeholder="Phone Number" [(ngModel)]="modele.phone_number" #phone_number="ngModel" required autofocus>
+          <hr>
+          <button class="btn btn-lg btn-primary btn-block btn-signin" (click)="register()" >Register</button>
+        </form>
+      </div>
+    </div>
+    <a [routerLink]="['/login']" class="lastline">
+      Don't have an account.? Login
+    </a>
+  </div>
+</div>

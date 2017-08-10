@@ -1,0 +1,22 @@
+<div class="visible-lg visible-md" style="background-color: #168fec; padding: 5px;color: white; height: 30px;text-align: center">
+  <div class="col-lg-4 col-md-4 top"><span class="top_icon glyphicon glyphicon-earphone"></span> 9471225153456</div>
+  <div class="col-lg-4 col-md-4 top"> <span class="top_icon glyphicon glyphicon-home"></span> 112/2 Smaple Street , Address, Country 000000</div>
+  <div class="col-lg-4 col-md-4 top"> <span class="top_icon glyphicon glyphicon glyphicon-envelope"></span>  info@parkit.com</div>
+</div>
+<!--nav bar-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Sample <span style="color: crimson">Brand</span></a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngIf="!isloged"><a [routerLink]="['/login']">Log in</a></li>
+      <li *ngIf="!isloged"><a [routerLink]="['/signup']">Sign up</a></li>
+      <li *ngIf="isloged"><a  [routerLink]="['/login']" (click)="refresh()">Log out</a></li>
+    </ul>
+
+
+  </div>
+</nav>
+<!--End of nav bar-->
